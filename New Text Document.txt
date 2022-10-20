@@ -1,0 +1,15 @@
+
+DATASET=imdb
+LABEL_NAME_FILE=label_names.txt
+TRAIN_CORPUS=train.txt
+TEST_CORPUS=test.txt
+TEST_LABEL=test_labels.txt
+MAX_LEN=50
+TRAIN_BATCH=8
+ACCUM_STEP=8
+EVAL_BATCH=32
+GPUS=0
+MCP_EPOCH=4
+SELF_TRAIN_EPOCH=4
+
+python src/train.py --dataset_dir imdb --label_names_file label_names.txt --train_file train.txt --test_file test.txt --test_label_file test_labels.txt --max_len 50 --train_batch_size 16 --accum_steps 8 --eval_batch_size 32 --gpus 1 --mcp_epochs 2 --self_train_epochs 2
